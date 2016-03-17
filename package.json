@@ -16,8 +16,10 @@
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^1.8.0",
     "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.3",
     "gulp-if": "^2.0.0",
     "gulp-inject": "^3.0.0",
+    "gulp-less": "^3.0.5",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.2",
@@ -28,7 +30,9 @@
     "angular": "^1.5.0",
     "angular-resource": "^1.5.0",
     "angular-route": "^1.5.0",
+    "bootstrap": "^3.3.6",
     "express": "^4.13.4",
+    "mongoose": "^4.4.6",
     "socket.io": "^1.4.5",
     "socket.io-client": "^1.4.5"
   }

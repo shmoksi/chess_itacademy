@@ -5,6 +5,7 @@ var target = path.join(__dirname, 'lib');
 var clientTarget = path.join(target, 'client');
 var clientAssets = path.join(clientTarget, 'assets');
 var serverTarget = path.join(target, 'server');
+var commonTarget = path.join(target, 'common');
 var prefix = pkg.name + '-' + pkg.version;
 
 var clientJs = {
@@ -18,12 +19,18 @@ var clientPartials = {
   dest: prefix + '-partials.js'
 };
 
+var clientLess = {
+  src: path.resolve(__dirname, 'src/client/index.less'),
+  dest: prefix + '.css'
+};
+
 var clientHtml = {
   src: path.resolve(__dirname, 'src/client/index.html'),
   dest: 'index.html',
   files: [
     clientJs.dest,
-    clientPartials.dest
+    clientPartials.dest,
+    clientLess.dest
   ]
 };
 
@@ -32,6 +39,7 @@ var client = {
   assets: clientAssets,
   js: clientJs,
   partials: clientPartials,
+  less: clientLess,
   html: clientHtml
 };
 
@@ -40,6 +48,12 @@ var server = {
   src: path.resolve(__dirname, 'src/server')
 };
 
+var common = {
+  target: commonTarget,
+  src: path.resolve(__dirname, 'src/common')
+};
+
 exports.target = target;
 exports.server = server;
 exports.client = client;
+exports.common = common;
