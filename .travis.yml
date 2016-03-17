@@ -2,12 +2,12 @@ language: node_js
 node_js:
 - '5'
 - '0.8'
-- '0.10'
 install:
 - npm install
 script:
 - npm run build
 deploy:
+  provider: heroku
   api_key:
     secure: BfNcj9Oo3qzsiDgT4zvEJWdeBS5ZirTvt/hCgLdFPnqDG2TB0nCuO7oFqFLdrlARBxhnscoFuOledcv3xklYmTn+o1hUUk3bRkWeMc2eMJocb8PgNPR6PhYKnFWpD73OaPmvvlgjs5gcOoZtQa6Xqap8DS9X+blKmASontNTqVXvoKkms++n2M7fHDBaOI3tEbwcLGYHNcoSK2WlQCYr3A0zBlZKIADe3pKcHKtmjtW2QlfviRFjhODqVRty3heeP3OKprudm9W08pJhYmiid3SFGifFLRXZxubHsR9Y6gcDCrncZm/wSYZ8GBuAxki0ASfE7qQzgXiVQqZjDe4375u40FVtiaCIc64yenhdo3UbGoVK3AGSP3hmMQKPfDNg6efqFGrN06uJmcPzzTCbU8DNQZJHbCvGXlH4Ns7HVE8CfqlgEf+qkA+9cnCbzhGfIhN6mEPGMmpUrZzGlf/x79dfoQYbBPf+W7EJ5evmkh7leDYYx4sxvE3SVKw5Ea7Y3Kr1S2npUoxx96rpZoXcUqdcmfFlrUZmmLoorKLJ0ffVvakc1HyfCOIaSgUt5feD6w7eak/4x24xQWGhyEwu/yJ5HG5ojyBSVsIaJ+4qAXkmipZ2OY93adhbUIsUFGrTl2Uapuy83mmPrSO95kO0DO5Sk+bGWy3n+5BXzLPmNCA=
   app: my-chess
